@@ -1,0 +1,26 @@
+<?php 
+/* 
+Code to make the connection to MySQL database
+(using for insert/read pages -> filename db_config.php)
+
+Standard PHP mysqli format to make db connection, adapted from
+e.g. https://www.w3schools.com/php/php_mysql_connect.asp
+ */
+
+//Declare db variables
+$servername = "localhost";
+$dbusername = "root";
+$dbpassword = "password";
+$dbname = "test";
+
+// Create connection
+$mysqli = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+ 
+// Check connection
+if($mysqli === false){
+    die("ERROR: Could not connect. " . $mysqli->connect_error);
+}
+
+?>
+
+
