@@ -1,7 +1,9 @@
+<!--Test file check connection-->
+
 <?php
 /* 
 Code to make the connection to MySQL database 
-(using PDO for Login/Register pages -> filename config.php)
+(using PDO)
 
 Standard PHP PDO format to make db connection, adapted from
 e.g. https://www.w3schools.com/php/php_mysql_connect.asp

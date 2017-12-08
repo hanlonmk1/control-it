@@ -1,10 +1,23 @@
 <?php
+//start session
 session_start();
+//include config file to make the database connection
 require_once "db_config.php";
 
+//USE PREPARED STATEMENT TO SELECT DATA 
+
+//MySQL statement to retrieve most recent 7 user results of the logged-in user
 $sql = "SELECT * FROM DIAB1_TABLE WHERE username = 
-    (SELECT username FROM users WHERE username = '" . ($_SESSION['username']) . "')ORDER BY ID DESC LIMIT 7";
-$result = $mysqli->query($sql);
+    (SELECT username FROM users WHERE username = '" . ($_SESSION['username']) . "')ORDER BY Date DESC LIMIT 7";
+
+//Prepare the select statement.
+    $stmt = $mysqli->prepare($sql);
+
+//Execute the statement.
+    $stmt->execute();
+    
+// Pull result set
+    $result = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +43,7 @@ $result = $mysqli->query($sql);
     <body>
 
         <?php
+        //include CSS/HTML from menu.php on this page
         require "menu.php";
         ?>
             <div class="container-fluid">
@@ -55,6 +69,7 @@ $result = $mysqli->query($sql);
             <div class="col-md-3">
                 </div>
                 <div class="col-md-6">
+                    <!--Table to display user results of the logged-in user-->
                     <table class="table table-condensed table-bordered">
                         <thead>
                             <tr class="success">

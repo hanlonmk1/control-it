@@ -1,11 +1,7 @@
-<!--LOGIN PAGE-->
+<!--LOGIN PAGE - user enters username & password -->
 
 
 <?php
-// ERROR DISPLAY - ****REMOVE LATER***
-ini_set('display_errors', 'On'); 
-ini_set('html_errors', 0); 
-error_reporting(-1);
 
 // Include config file
 require_once 'db_config.php';
@@ -69,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                               save the username to the session */
                             session_start();
                             $_SESSION['username'] = $username;
-                           if ($_SESSION['username'] == 'Doctor_adm' || $_SESSION['username'] == 'Nurse_adm') {
+                           if ($_SESSION['username'] == 'ControlDoc' || $_SESSION['username'] == 'ControlNurse') {
                         header("location: review1a.php");   
                             }
                             else {

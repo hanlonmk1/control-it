@@ -1,5 +1,7 @@
 <?php
+//start session
 session_start();
+//include CSS/HTML from menu2.php on this page
 require_once "menu2.php";
 ?>
 <div class="container-fluid">

@@ -1,3 +1,5 @@
+<!--Test file to check array contents-->
+
 <?php
 // ERROR DISPLAY - ****REMOVE LATER***
 ini_set('display_errors', 'On'); 
@@ -14,10 +16,7 @@ require_once "include/db_config.php";
 
 //Execute the statement.
     $stmt->execute();
-    
-//// Store result
-//    $result = $stmt->store_result();
-    
+   
 // Pull result set
     $result = $stmt->get_result();
 

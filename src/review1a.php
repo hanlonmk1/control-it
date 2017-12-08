@@ -1,25 +1,23 @@
 <?php
-// ERROR DISPLAY - ****REMOVE LATER***
-ini_set('display_errors', 'On'); 
-ini_set('html_errors', 0); 
-error_reporting(-1);
 
+//start session
 session_start();
+//include config file to make the database connection
 require_once "db_config.php";
 
-if ($_SESSION['username'] == 'Doctor_adm' || $_SESSION['username'] == 'Nurse_adm') {
+//this page should only be accessed by the admin users 'ControlDoc' or 'ControlNurse'
+if ($_SESSION['username'] == 'ControlDoc' || $_SESSION['username'] == 'ControlNurse') {
 
+//USE PREPARED STATEMENT TO SELECT DATA    
+    
 //Select statement to retrieve required data
     $sql = "SELECT ID, username FROM users";
-
+    
 //Prepare the select statement.
     $stmt = $mysqli->prepare($sql);
 
 //Execute the statement.
     $stmt->execute();
-    
-//// Store result
-//    $result = $stmt->store_result();
     
 // Pull result set
     $result = $stmt->get_result();
@@ -73,6 +71,7 @@ if ($_SESSION['username'] == 'Doctor_adm' || $_SESSION['username'] == 'Nurse_adm
         <body>
 
         <?php
+        //include CSS/HTML from menu.php on this page
         require "menu.php";
         ?>
             <div class="container-fluid">
@@ -115,6 +114,7 @@ if ($_SESSION['username'] == 'Doctor_adm' || $_SESSION['username'] == 'Nurse_adm
 <?php
 }
 else {
+    //include CSS/HTML from menu2.php on this redirect page
     require_once "menu2.php";
     ?>
     <div class="container-fluid">

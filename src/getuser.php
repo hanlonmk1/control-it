@@ -30,10 +30,20 @@
 require "db_config.php";
 $q = intval($_GET['q']);
 
+//USE PREPARED STATEMENT TO SELECT DATA 
+
 //mySQL Select statement to generate table of selected user results
 mysqli_select_db($mysqli,"test");
-$sql="SELECT * FROM DIAB1_TABLE WHERE username = (SELECT username FROM users WHERE id = '".$q."') ORDER BY ID DESC LIMIT 7";
-$result = $mysqli->query($sql);
+$sql="SELECT * FROM DIAB1_TABLE WHERE username = (SELECT username FROM users WHERE id = '".$q."') ORDER BY Date DESC LIMIT 10";
+
+//Prepare the select statement.
+    $stmt = $mysqli->prepare($sql);
+
+//Execute the statement.
+    $stmt->execute();
+    
+// Pull result set
+    $result = $stmt->get_result();
 
 
                             while ($row = $result->fetch_array()) {

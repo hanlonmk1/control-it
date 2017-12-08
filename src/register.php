@@ -1,10 +1,7 @@
+<!--REGISTRATION PAGE - user registers with the application here -->
 <?php
-// ERROR DISPLAY - ****REMOVE LATER***
-ini_set('display_errors', 'On'); 
-ini_set('html_errors', 0); 
-error_reporting(-1);
 
-// Include config file
+//include config file to make the database connection
 require_once 'db_config.php';
 
 // Define variables and initialize with empty values

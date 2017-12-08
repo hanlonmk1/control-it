@@ -1,4 +1,4 @@
-
+<!--LOGOUT PAGE - one click logs out user -->
 <?php
 require "menu2.php";
 ?>
