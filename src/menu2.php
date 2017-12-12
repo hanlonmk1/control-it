@@ -1,5 +1,13 @@
-<!--Call this file to add basic navbar (only CONTROL-IT title) across flashing info pages-->
+<!--
+menu2.php
+@author Mark Hanlon x16135571@ncirl.ie 
 
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<MENU2 - Call this file to add basic navbar (only CONTROL-IT title) across flashing info pages>
+
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>

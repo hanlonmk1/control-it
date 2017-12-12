@@ -1,4 +1,13 @@
-<?php
+<!--
+insert1.php
+@author Mark Hanlon x16135571@ncirl.ie
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<INSERT1 - directs user to submit results>
+
+--><?php
 //start session
 session_start();
 //include CSS/HTML from menu2.php on this page

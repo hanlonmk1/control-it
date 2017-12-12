@@ -1,5 +1,5 @@
 <!--
-<This is the database connection configuration file - from https://github.com/IBM-Bluemix/php-mysql>
+<This is the database connection configuration file - used from https://github.com/IBM-Bluemix/php-mysql>
 
 BLUEMIX licencing info:
 /**

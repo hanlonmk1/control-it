@@ -1,0 +1,18 @@
+  190  cd dev
+  191  mkdir lamp
+  192  wget https://gist.githubusercontent.com/ankurk91/16a3d36b1afa3f9c91f02828adfedf6f/raw/22de23efb125996adae4e7a4de98af1ce8b55224/install_lamp_16.sh
+  193  chmod +x install_lamp_16.sh
+  194  sudo ./install_lamp_16.sh
+  195  sudo apt-get -y install phpmyadmin
+  196  sudo service apache2 restart
+  197  sudo vi /var/www/html/version.php
+  198  cd /var/www/html/
+  199  ls
+  200  sudo git clone https://github.com/IBM-Bluemix/php-mysql.git
+  201  cd php-mysql
+  202  ls
+  203  ls -alrt
+  204  vi db.php
+  205  sudo root
+  206  su root
+  207  sudo vi db.php

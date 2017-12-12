@@ -1,9 +1,22 @@
-<!--LOGIN PAGE - user enters username & password -->
+<!--
+login.php
+@author Mark Hanlon x16135571@ncirl.ie / tutorialrepublic.com
 
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
 
+<LOGIN PAGE - user enters username & password to log in to application>
+
+Registration/Login system is modified from:
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
+
+Also uses elements from:
+Google reCAPTCHA 2.0 (https://developers.google.com/recaptcha/)
+https://www.bleuken.com/php-demo-using-google-recaptcha-v2-0-sample-php-code/
+-->
 <?php
 
-// Include config file
+//include config file to make the database connection
 require_once 'db_config.php';
 
 // Define variables and initialize with empty values
@@ -92,7 +105,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $mysqli->close();
     }
 ?>
-                            
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -102,8 +114,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <title>CONTROL-IT! -> Login</title>
 
-        <meta name="description" content="Source code generated using layoutit.com">
-        <meta name="author" content="LayoutIt!">
+        <meta name="description" content="HTML/CSS source code generated using layoutit.com">
+        <meta name="author" content="Mark Hanlon x16135571@ncirl.ie">
 
         <!--Styles from Layoutit! Bootstrap builder-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -121,7 +133,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <body>
 
         <?php
-        require "menu.php";
+        require_once "menu.php";
         ?>
 
         <div class="container-fluid">

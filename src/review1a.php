@@ -1,3 +1,16 @@
+<!--
+review1a.php
+@author Mark Hanlon x16135571@ncirl.ie 
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<REVIEW RESULTS PAGE - for doctor/nurse to review patient results>
+
+Uses elements from: 
+https://www.w3schools.com/php/php_ajax_database.asp
+http://thisinterestsme.com/populate-dropdown-list-mysql/
+-->
 <?php
 
 //start session
@@ -34,15 +47,19 @@ if ($_SESSION['username'] == 'ControlDoc' || $_SESSION['username'] == 'ControlNu
 
             <title>CONTROL-IT! -> Check results</title>
 
-            <meta name="description" content="Source code generated using layoutit.com">
-            <meta name="author" content="LayoutIt!">
+        <meta name="description" content="HTML/CSS source code generated using layoutit.com">
+        <meta name="author" content="Mark Hanlon x16135571@ncirl.ie">
 
+        <!--Styles from Layoutit! Bootstrap builder-->
             <link href="css/bootstrap.min.css" rel="stylesheet">
             <link href="css/style.css" rel="stylesheet">
 
+        <!--Default javascripts from Layoutit! Bootstrap builder-->
             <script src="js/jquery.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/scripts.js"></script>
+            
+            <!--AJAX from https://www.w3schools.com/php/php_ajax_database.asp--> 
             <script>
                 function showUser(str) {
                     if (str == "") {

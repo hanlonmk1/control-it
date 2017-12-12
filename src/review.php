@@ -1,3 +1,13 @@
+<!--
+review.php
+@author Mark Hanlon x16135571@ncirl.ie 
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<REVIEW RESULTS PAGE - for patient results to view own results whilst logged-in>
+
+-->
 <?php
 //start session
 session_start();
@@ -29,12 +39,14 @@ $sql = "SELECT * FROM DIAB1_TABLE WHERE username =
 
         <title>CONTROL-IT! -> Check results</title>
 
-        <meta name="description" content="Source code generated using layoutit.com">
-        <meta name="author" content="LayoutIt!">
+        <meta name="description" content="HTML/CSS source code generated using layoutit.com">
+        <meta name="author" content="Mark Hanlon x16135571@ncirl.ie">
 
+        <!--Styles from Layoutit! Bootstrap builder-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
 
+        <!--Default javascripts from Layoutit! Bootstrap builder-->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
@@ -44,7 +56,7 @@ $sql = "SELECT * FROM DIAB1_TABLE WHERE username =
 
         <?php
         //include CSS/HTML from menu.php on this page
-        require "menu.php";
+        require "menu1.php";
         ?>
             <div class="container-fluid">
                 <div class="row">

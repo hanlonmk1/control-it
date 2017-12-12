@@ -1,5 +1,13 @@
-<!--This file is used to insert user input from 'Enter results' form into database-->
+<!--
+db_insert.php
+@author Mark Hanlon x16135571@ncirl.ie
 
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<DB INSERT - This file is used to insert user input from 'Enter results' form into database>
+
+-->
 <?php
 //include CSS/HTML from menu2.php on this page
 require_once "menu2.php";

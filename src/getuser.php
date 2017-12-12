@@ -1,3 +1,16 @@
+<!--
+getuser.php
+@author Mark Hanlon x16135571@ncirl.ie 
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<GETUSER file - uses mySQL Select statement to generate table of selected user results from dropdown in review1a.php>
+
+Uses elements from: 
+https://www.w3schools.com/php/php_ajax_database.asp
+http://thisinterestsme.com/populate-dropdown-list-mysql/
+-->
 <!DOCTYPE html>
 <html>
 <head>

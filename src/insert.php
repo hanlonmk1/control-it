@@ -1,4 +1,18 @@
+<!--
+insert.php
+@author Mark Hanlon x16135571@ncirl.ie
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<INSERT - user submits results to database>
+
+Also uses elements from: 
+http://jqueryui.com/datepicker/
+https://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker
+-->
 <?php
+//start session
 session_start();
 ?>
 
@@ -11,18 +25,23 @@ session_start();
 
     <title>CONTROL-IT! -> Enter results</title>
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+        <meta name="description" content="HTML/CSS source code generated using layoutit.com">
+        <meta name="author" content="Mark Hanlon x16135571@ncirl.ie">
 
+        <!--Styles from Layoutit! Bootstrap builder-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
+        <!--Styles from jQuery UI referenced above-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
 
+        <!--Default javascripts from Layoutit! Bootstrap builder-->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script> 
 
+        <!--jQuery UI Datepicker referenced above-->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
@@ -34,7 +53,7 @@ session_start();
     <body>
 
         <?php
-        require_once "menu.php";
+        require_once "menu1.php";
         ?>
 
         <div class="container-fluid">
@@ -56,7 +75,7 @@ session_start();
                 <div class="col-md-2">
                 </div>
             </div>
-
+            </div>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-2">
@@ -97,10 +116,23 @@ session_start();
                     </div>
                 </div>
             </div>
+                <div class="container-fluid">
+            <div class="row">
 
-        </div>
-    </div>
+                <div class="col-md-2">
+                </div>
+
+                <div class="col-md-8">
+
+                    <h5 class="text-primary">
+                        * Default is today's date - if you require other dates use datepicker.
+                    </h5>
+                </div>
+
+                <div class="col-md-2">
+                </div>
+            </div>
+            </div>
 
 </body>
 </html>
-

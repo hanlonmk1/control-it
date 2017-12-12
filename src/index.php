@@ -1,4 +1,13 @@
-<!--This is the front page for the site & web application-->
+<!--
+index.php
+@author Mark Hanlon x16135571@ncirl.ie 
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<INDEX - This is the front page for the site & web application>
+
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +18,14 @@
 
         <title>CONTROL-IT! -> Welcome page</title>
 
-        <meta name="description" content="Source code generated using layoutit.com">
-        <meta name="author" content="LayoutIt!">
+        <meta name="description" content="HTML/CSS source code generated using layoutit.com">
+        <meta name="author" content="Mark Hanlon x16135571@ncirl.ie">
 
+        <!--Styles from Layoutit! Bootstrap builder-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
 
+        <!--Default javascripts from Layoutit! Bootstrap builder-->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
@@ -48,7 +59,6 @@
 
                 </div>
             </div>
-
 
     </body>
 </html>

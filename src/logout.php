@@ -1,4 +1,13 @@
-<!--LOGOUT PAGE - one click logs out user -->
+<!--
+logout.php
+@author Mark Hanlon x16135571@ncirl.ie
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<LOGOUT PAGE - one click logs user out of session>
+
+-->
 <?php
 require "menu2.php";
 ?>

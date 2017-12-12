@@ -1,4 +1,19 @@
-<!--REGISTRATION PAGE - user registers with the application here -->
+<!--
+register.php
+@author Mark Hanlon x16135571@ncirl.ie  / tutorialrepublic.com
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+<REGISTRATION PAGE - user nominates username & password to register with the application here>
+
+Registration/Login system is modified from: 
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
+
+Also uses elements from: 
+Google reCAPTCHA 2.0 (https://developers.google.com/recaptcha/)
+https://www.bleuken.com/php-demo-using-google-recaptcha-v2-0-sample-php-code/
+-->
 <?php
 
 //include config file to make the database connection
@@ -25,6 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate username
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a username.";
+        // below validates that the username only contains alphanumeric and underscore characters, \w is built-in PHP expression
+    } elseif((trim($_POST['username'])) != preg_replace("/[^\w]+/", "",(trim($_POST['username'])))){
+        $username_err = "Username must only contain alphanumeric or underscore characters.";    
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE username = ?";
@@ -58,8 +76,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate password
     if(empty(trim($_POST['password']))){
         $password_err = "Please enter a password.";
-    } elseif(strlen(trim($_POST['password'])) < 6){
-        $password_err = "Password must contain at least 6 characters.";
+    } elseif(strlen(trim($_POST['password'])) < 8){
+        $password_err = "Password must contain at least 8 characters.";
+        // below validates that the password only contains alphanumeric and underscore characters, \w is built-in PHP expression
+    } elseif((trim($_POST['password'])) != preg_replace("/[^\w]+/", "",(trim($_POST['password'])))){
+        $password_err = "Password must only contain alphanumeric or underscore characters.";    
     } else{
         $password = trim($_POST['password']);
     }
@@ -113,8 +134,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <title>CONTROL-IT!- Register</title>
 
-        <meta name="description" content="Source code generated using layoutit.com">
-        <meta name="author" content="LayoutIt!">
+        <meta name="description" content="HTML/CSS source code generated using layoutit.com">
+        <meta name="author" content="Mark Hanlon x16135571@ncirl.ie">
 
         <!--Styles from Layoutit! Bootstrap builder-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -146,12 +167,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     </h3>
                     <form role="form"action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                            <label>Username</label>
+                            <label>Username (only alphanumeric characters or underscore) </label>
                             <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
                             <span class="help-block"><?php echo $username_err; ?></span>
                         </div>
                         <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                            <label>Password (must contain at least 6 characters)</label>
+                            <label>Password (at least 8 characters & only alphanumeric or underscore)</label>
                             <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
                             <span class="help-block"><?php echo $password_err; ?></span>
                         </div>

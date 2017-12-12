@@ -1,14 +1,13 @@
 <!--
-menu.php
+menu1.php
 @author Mark Hanlon x16135571@ncirl.ie 
 
 HTML/CSS/Javascript/Bootstrap modified from:
 http://www.layoutit.com/build
 
-<MENU - Call this file to add full navbar menu across page>
+<MENU1 - Call this file to add full navbar menu across page for patient>
 
 -->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,7 +33,7 @@ http://www.layoutit.com/build
                                     <a href="insert1.php">Enter results</a>
                                 </li>
                                 <li class="active">
-                                    <a href="review1a.php">Check results</a>
+                                    <a href="review.php">Check results</a>
                                 </li>
                             </ul>
 
