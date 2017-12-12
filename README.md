@@ -2,8 +2,10 @@
 
 ### Author: ###
 * Mark Hanlon
-Higher Diploma in Science in Cybersecurity 2017/2018
-National College of Ireland
+
+## Course details: ##
+Higher Diploma in Science in Cybersecurity 2017/2018 /
+National College of Ireland /
 Student Number: 16135571
 
 ### Project: ###
