@@ -1,0 +1,26 @@
+CONTROL-IT project code references:
+
+HTML/CSS/Javascript/Bootstrap modified from:
+http://www.layoutit.com/build
+
+PHP Connect to database:
+https://www.w3schools.com/php/php_mysql_connect.asp
+
+BLUEMIX Database connection file:
+https://github.com/IBM-Bluemix/php-mysql
+
+Registration/Login system: 
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
+
+Google reCAPTCHA 2.0: 
+(https://developers.google.com/recaptcha/)
+https://www.bleuken.com/php-demo-using-google-recaptcha-v2-0-sample-php-code/
+
+PHP - AJAX and MySQL (Dropdown list):
+https://www.w3schools.com/php/php_ajax_database.asp
+http://thisinterestsme.com/populate-dropdown-list-mysql/
+
+DATEPICKER:
+http://jqueryui.com/datepicker/
+https://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker
+
